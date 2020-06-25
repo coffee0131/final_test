@@ -1,15 +1,15 @@
-string = input()
-vowel ='AaEeIiOoUu'
-
 def get_count(input_str):
-    vowel = 'AaEeIiOoUu'
+    mo = ['a','e','i','o','u','A','E','I','O','U']
+    while 1:
+        if input_str == '#':
+            return
 
-    while input_str != '#':
-        answer = 0
-        for i in input_str:
-            answer += 1
-    
-    return answer
+        cnt = 0
+        for i in range(len(input_str)):
+            if input_str[i] in mo:
+                cnt += 1
+
+        return cnt
 
 # tester provided
 def test_sample():
